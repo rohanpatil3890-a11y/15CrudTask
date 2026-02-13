@@ -1,0 +1,28 @@
+<div class="card p-3">
+    <form [formGroup]="StudentForm" (ngSubmit)="onAddStd()">
+        <div class="form-group">
+            <label for="fname">Fname</label>
+            <input formControlName="fname" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="lname">Lname</label>
+            <input formControlName="lname" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input formControlName="email" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact</label>
+            <input formControlName="contact" type="text" class="form-control">
+        </div>
+        <button 
+        *ngIf="!IsInEditMode"
+        class="btn btn-sm btn-block btn-primary">Add Student</button>
+        <button 
+        (click)="onUpdate()"
+        type="button"
+        *ngIf="IsInEditMode"
+        class="btn btn-sm btn-block btn-primary">Update Student</button>
+    </form>
+</div>

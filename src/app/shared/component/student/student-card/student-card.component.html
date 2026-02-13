@@ -1,0 +1,30 @@
+<table class="table table-bordered bg-White">
+    <thead>
+        <tr>
+            <th>SrNO</th>
+            <th>FullName</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Edit</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of StdArr let i = index trackBy : trackByID">
+            <td>{{i + 1}}</td>
+            <td>{{std.fname}} {{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+            <td><button
+                (click)="onEdit(std)"
+                mat-mini-fab color="primary">
+                    <mat-icon>edit</mat-icon>
+                </button></td>
+            <td><button
+                (click)="onRemove(std.stdId)"
+                mat-mini-fab color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button></td>
+        </tr>
+    </tbody>
+</table>

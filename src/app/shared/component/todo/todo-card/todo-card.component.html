@@ -1,0 +1,20 @@
+
+
+
+<ul class="list-group">
+    <li
+
+    *ngFor="let todo of todoArr trackBy : trackById"
+    class="list-group-item d-flex justify-content-between">
+   <strong>  {{todo.todoName}}</strong>
+   <div>
+    <button 
+    (click)="onEdit(todo)"
+    class="btn btn-sm btn-primary">Edit</button>
+     <button 
+     (click)="onRemove(todo.todoId)"
+     class="btn btn-sm btn-danger ml-3">Remove</button>
+   </div>
+    </li>
+
+</ul>

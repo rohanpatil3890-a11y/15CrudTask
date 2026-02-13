@@ -1,0 +1,14 @@
+<div class="row mt-5">
+    <div class="col-md-8 offset-md-2">
+        <app-post-form>
+
+        </app-post-form>
+    </div>
+</div>
+<div class="row">
+    <div *ngFor="let post of postArr trackBy : trackById" class="col-md-4 mb-4">
+        <app-post-card [postObj]="post">
+
+        </app-post-card>
+    </div>
+</div>
