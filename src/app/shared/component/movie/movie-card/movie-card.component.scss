@@ -1,0 +1,82 @@
+
+// .movie-card{
+//     background-color: rgba(0, 0, 0, 0.7);
+// }
+
+// .movie-card h3{
+//     height: 40px;
+//     font-size: 28px;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     overflow: hidden;
+// }
+
+// .movie-card h4 .span{
+//     padding:4px;
+//     border-radius: 10%;
+//     display: inline-block
+// }
+
+// .movie-card figure{
+//     height: 200px;
+//     width:100%;
+//     overflow: hidden;
+//     position: relative;
+// }
+
+// .movie-card figure img{
+//     height: 100%;
+//     width:100%;
+//     object-fit: cover;
+// }
+
+// figcaption{
+//     position: absolute;
+//     top:30%;
+//     left:0;
+//     height: 70%;
+//     width:100%;
+//     background-color: rgba(0, 0, 0, 0.7);
+//     overflow-y: auto;
+//     padding: 20px;
+//     transform: translateY(120%);
+//     opacity: 0;
+//     transition: all 0.3s ease-in-out;
+// }
+
+// .movie-card:is(:hover, :active, :focus) figcaption{
+//      transform: translateY(0%);
+//     opacity: 1;
+// }
+
+
+.movie-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.movie-img {
+  height: 260px;
+  object-fit: cover;
+}
+
+.movie-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  color: white;
+}
+
+.movie-overlay p {
+  font-size: 14px;
+  margin: 0;
+}
