@@ -1,7 +1,7 @@
 export interface IMovie {
   content: string;
   path: string;
-  rating: number;   // keep string because your JSON has "9"
+  rating: number;   
   title: string;
   movieId : string
 }

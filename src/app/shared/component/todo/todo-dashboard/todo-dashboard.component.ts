@@ -74,7 +74,7 @@ export class TodoDashboardComponent implements OnInit {
     this._tosService.updateObjSubObs.subscribe({
       next : data => {
         console.log(data);
-        let getIndex  = this.todoArr.findIndex(p => p.todoId = data.todoId);
+        let getIndex  = this.todoArr.findIndex(p => p.todoId === data.todoId);
         this.todoArr[getIndex] = data
         this._snackBar.snackBar(`The Student with id ${data.todoId} is updated successfully`)
         

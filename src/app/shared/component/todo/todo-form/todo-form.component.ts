@@ -67,7 +67,7 @@ export class TodoFormComponent implements OnInit {
    this._tdodService.UpdateObj(UPDATE_OBJ).subscribe({
     next : data =>{
       console.log(data);
-      this._tdodService.EmitUpdateObj(data)
+      this._tdodService.EmitUpdateObj(UPDATE_OBJ)
       this.todoForm.reset();
       this.isInEditMode = false;
       
